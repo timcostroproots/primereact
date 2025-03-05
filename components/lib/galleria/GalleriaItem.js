@@ -319,7 +319,7 @@ export const GalleriaItem = React.memo(
                 let indicators = [];
                 const indicatorsProps = mergeProps(
                     {
-                        className: classNames(cx('indicators'), props.indicatorsContentClassName)
+                        className: classNames(props.indicatorsContentClassName, cx('indicators'))
                     },
                     getPTOptions('indicators')
                 );

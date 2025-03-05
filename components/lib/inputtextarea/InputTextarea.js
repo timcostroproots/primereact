@@ -138,7 +138,7 @@ export const InputTextarea = React.memo(
         const rootProps = mergeProps(
             {
                 ref: elementRef,
-                className: classNames(cx('root', { context, isFilled }), props.className),
+                className: classNames(props.className, cx('root', { context, isFilled })),
                 onFocus: onFocus,
                 onBlur: onBlur,
                 onKeyUp: onKeyUp,

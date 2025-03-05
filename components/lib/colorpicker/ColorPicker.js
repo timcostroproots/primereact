@@ -638,7 +638,7 @@ export const ColorPicker = React.memo(
                 id: props.id,
                 ref: elementRef,
                 style: props.style,
-                className: classNames(cx('root'), props.className)
+                className: classNames(props.className, cx('root'))
             },
             ColorPickerBase.getOtherProps(props),
             ptm('root')

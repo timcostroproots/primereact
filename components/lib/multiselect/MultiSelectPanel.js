@@ -263,7 +263,7 @@ export const MultiSelectPanel = React.memo(
 
             const panelProps = mergeProps(
                 {
-                    className: classNames(cx('panel', { panelProps: props, context, allowOptionSelect }), props.panelClassName),
+                    className: classNames(props.panelClassName, cx('panel', { panelProps: props, context, allowOptionSelect })),
                     style: props.panelStyle,
                     onClick: props.onClick
                 },

@@ -662,7 +662,7 @@ export const Dialog = React.forwardRef((inProps, ref) => {
             {
                 ref: dialogRef,
                 id: idState,
-                className: classNames(cx('root', { props, maximized, context }), props.className),
+                className: classNames(props.className, cx('root', { props, maximized, context })),
                 style: props.style,
                 onClick: props.onClick,
                 role: 'dialog',

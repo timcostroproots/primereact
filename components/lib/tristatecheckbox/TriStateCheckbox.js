@@ -146,7 +146,7 @@ export const TriStateCheckbox = React.memo(
 
         const rootProps = mergeProps(
             {
-                className: classNames(cx('root', { context }), props.className),
+                className: classNames(props.className, cx('root', { context })),
                 style: props.style,
                 'data-p-disabled': props.disabled
             },

@@ -248,7 +248,7 @@ export const Panel = React.forwardRef((inProps, ref) => {
             id: idState,
             ref: elementRef,
             style: props.style,
-            className: classNames(cx('root'), props.className)
+            className: classNames(props.className, cx('root'))
         },
         PanelBase.getOtherProps(props),
         ptm('root')

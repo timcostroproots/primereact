@@ -175,7 +175,7 @@ export const SlideMenu = React.memo(
                 {
                     ref: menuRef,
                     id: props.id,
-                    className: classNames(cx('root'), props.className),
+                    className: classNames(props.className, cx('root')),
                     style: props.style,
                     onClick: (e) => onPanelClick(e)
                 },

@@ -88,7 +88,7 @@ export const Avatar = React.forwardRef((inProps, ref) => {
         {
             ref: elementRef,
             style: props.style,
-            className: classNames(cx('root', { imageFailed }), props.className)
+            className: classNames(props.className, cx('root', { imageFailed }))
         },
         AvatarBase.getOtherProps(props),
         ptm('root')

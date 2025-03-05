@@ -453,7 +453,7 @@ export const Tree = React.memo(
         const createEmptyMessageNode = () => {
             const emptyMessageProps = mergeProps(
                 {
-                    className: classNames(cx('emptyMessage'), props.contentClassName),
+                    className: classNames(props.contentClassName, cx('emptyMessage')),
                     role: 'treeitem'
                 },
                 ptm('emptyMessage')
@@ -653,7 +653,7 @@ export const Tree = React.memo(
         const rootProps = mergeProps(
             {
                 ref: elementRef,
-                className: classNames(cx('root'), props.className),
+                className: classNames(props.className, cx('root')),
                 style: props.style,
                 id: props.id
             },

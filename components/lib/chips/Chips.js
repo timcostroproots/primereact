@@ -452,7 +452,7 @@ export const Chips = React.memo(
             {
                 id: props.id,
                 ref: elementRef,
-                className: classNames(cx('root', { isFilled, focusedState, disabled: props.disabled, invalid: props.invalid }), props.className),
+                className: classNames(props.className, cx('root', { isFilled, focusedState, disabled: props.disabled, invalid: props.invalid })),
                 style: props.style
             },
             ptm('root')

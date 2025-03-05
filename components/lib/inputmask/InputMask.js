@@ -628,7 +628,7 @@ export const InputMask = React.memo(
         }, [props.disabled]);
 
         const otherProps = InputMaskBase.getOtherProps(props);
-        const className = classNames(cx('root', { context }), props.className);
+        const className = classNames(props.className, cx('root', { context }));
 
         return (
             <InputText

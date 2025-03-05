@@ -106,7 +106,7 @@ export const Chip = React.memo(
                 {
                     ref: elementRef,
                     style: props.style,
-                    className: classNames(cx('root'), props.className),
+                    className: classNames(props.className, cx('root')),
                     'aria-label': props.label
                 },
                 ChipBase.getOtherProps(props),

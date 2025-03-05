@@ -100,7 +100,7 @@ export const ScrollTop = React.memo(
             {
                 ref: scrollElementRef,
                 type: 'button',
-                className: classNames(cx('root'), props.className),
+                className: classNames(props.className, cx('root')),
                 style: props.style,
                 onClick,
                 'aria-label': scrollTopAriaLabel

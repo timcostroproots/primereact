@@ -92,7 +92,7 @@ export const BlockUI = React.forwardRef((inProps, ref) => {
             const appendTo = props.fullScreen ? document.body : 'self';
             const maskProps = mergeProps(
                 {
-                    className: classNames(cx('mask'), props.className),
+                    className: classNames(props.className, cx('mask')),
                     style: {
                         ...props.style,
                         position: props.fullScreen ? 'fixed' : 'absolute',
@@ -124,7 +124,7 @@ export const BlockUI = React.forwardRef((inProps, ref) => {
             id: props.id,
             ref: elementRef,
             style: props.containerStyle,
-            className: classNames(cx('root'), props.containerClassName),
+            className: classNames(props.containerClassName, cx('root')),
             'aria-busy': props.blocked
         },
         BlockUIBase.getOtherProps(props),

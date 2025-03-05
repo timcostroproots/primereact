@@ -73,7 +73,7 @@ export const InputSwitch = React.memo(
 
         const rootProps = mergeProps(
             {
-                className: classNames(cx('root', { checked }), props.className),
+                className: classNames(props.className, cx('root', { checked })),
                 style: props.style,
                 role: 'checkbox',
                 'aria-checked': checked,

@@ -628,7 +628,7 @@ export const Carousel = React.memo(
 
             const containerProps = mergeProps(
                 {
-                    className: classNames(cx('container'), props.containerClassName),
+                    className: classNames(props.containerClassName, cx('container')),
                     'aria-live': allowAutoplay.current ? 'polite' : 'off'
                 },
                 ptm('container')
@@ -798,7 +798,7 @@ export const Carousel = React.memo(
             {
                 id: props.id,
                 ref: elementRef,
-                className: classNames(cx('root', { isVertical }), props.className),
+                className: classNames(props.className, cx('root', { isVertical })),
                 style: props.style,
                 role: 'region'
             },
@@ -808,7 +808,7 @@ export const Carousel = React.memo(
 
         const contentProps = mergeProps(
             {
-                className: classNames(cx('content'), props.contentClassName)
+                className: classNames(props.contentClassName, cx('content'))
             },
             ptm('content')
         );

@@ -130,7 +130,7 @@ const GalleriaThumbnailItem = React.memo((props) => {
 
     const thumbnailItemProps = mergeProps(
         {
-            className: classNames(cx('thumbnailItem', { subProps: props }), props.className),
+            className: classNames(props.className, cx('thumbnailItem', { subProps: props })),
             role: 'tab',
             'data-p-active': props.current,
             'aria-selected': props.current,
@@ -353,7 +353,7 @@ export const GalleriaThumbnails = React.memo(
                 [data-pc-section="thumbnailitem"] {
                     flex: 1 0 ${100 / numVisibleState}%
                 }
-            }
+            } 
         `;
 
             if (props.responsiveOptions) {
@@ -378,7 +378,7 @@ export const GalleriaThumbnails = React.memo(
                             [data-pc-section="thumbnailitem"] {
                                 flex: 1 0 ${100 / res.numVisible}%
                             }
-                        }
+                        } 
                     }
                 `;
                 }

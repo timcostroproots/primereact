@@ -616,7 +616,7 @@ export const FileUpload = React.memo(
 
             const buttonbarProps = mergeProps(
                 {
-                    className: classNames(cx('buttonbar'), props.headerClassName),
+                    className: classNames(props.headerClassName, cx('buttonbar')),
                     style: props.headerStyle
                 },
                 ptm('buttonbar')
@@ -646,7 +646,7 @@ export const FileUpload = React.memo(
             const rootProps = mergeProps(
                 {
                     id: props.id,
-                    className: classNames(cx('root'), props.className),
+                    className: classNames(props.className, cx('root')),
                     style: props.style
                 },
                 FileUploadBase.getOtherProps(props),
@@ -713,7 +713,7 @@ export const FileUpload = React.memo(
             const input = !hasFiles && <input {...inputProps} />;
             const rootProps = mergeProps(
                 {
-                    className: classNames(cx('root'), props.className),
+                    className: classNames(props.className, cx('root')),
                     style: props.style
                 },
                 FileUploadBase.getOtherProps(props),

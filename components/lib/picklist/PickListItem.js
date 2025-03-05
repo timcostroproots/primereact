@@ -51,7 +51,7 @@ export const PickListItem = React.memo((props) => {
 
     const itemProps = mergeProps(
         {
-            className: classNames(cx('item', { selected: props.selected, focused: props.focused }), props.className),
+            className: classNames(props.className, cx('item', { selected: props.selected, focused: props.focused })),
             id: props.id,
             onClick,
             onKeyDown,

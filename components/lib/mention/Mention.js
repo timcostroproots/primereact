@@ -555,7 +555,7 @@ export const Mention = React.memo(
             {
                 ref: elementRef,
                 id: props.id,
-                className: classNames(cx('root', { focusedState, isFilled }), props.className),
+                className: classNames(props.className, cx('root', { focusedState, isFilled })),
                 style: props.style
             },
             MentionBase.getOtherProps(props),

@@ -1173,7 +1173,7 @@ export const InputNumber = React.memo(
         }, [props.disabled]);
 
         const createInputElement = () => {
-            const className = classNames(cx('input', { context }), props.inputClassName);
+            const className = classNames(props.inputClassName, cx('input', { context }));
             const valueToRender = formattedValue(props.value);
 
             return (
@@ -1263,7 +1263,7 @@ export const InputNumber = React.memo(
             const decrementButtonProps = mergeProps(
                 {
                     type: 'button',
-                    className: classNames(cx('decrementButton'), props.decrementButtonClassName),
+                    className: classNames(props.decrementButtonClassName, cx('decrementButton')),
                     onPointerLeave: onDownButtonMouseLeave,
                     onPointerDown: (e) => onDownButtonMouseDown(e),
                     onPointerUp: onDownButtonMouseUp,
@@ -1320,7 +1320,7 @@ export const InputNumber = React.memo(
         const rootProps = mergeProps(
             {
                 id: props.id,
-                className: classNames(cx('root', { focusedState, stacked, horizontal, vertical }), props.className),
+                className: classNames(props.className, cx('root', { focusedState, stacked, horizontal, vertical })),
                 style: props.style
             },
             otherProps,

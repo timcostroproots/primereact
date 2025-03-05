@@ -97,7 +97,7 @@ const PrimeReactChart = React.memo(
                 id: props.id,
                 ref: elementRef,
                 style: sx('root'),
-                className: classNames(cx('root'), props.className)
+                className: classNames(props.className, cx('root'))
             },
             ChartBase.getOtherProps(props),
             ptm('root')

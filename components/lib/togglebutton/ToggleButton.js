@@ -101,7 +101,7 @@ export const ToggleButton = React.memo(
             {
                 ref: elementRef,
                 id: props.id,
-                className: classNames(cx('root', { hasIcon, hasLabel }), props.className),
+                className: classNames(props.className, cx('root', { hasIcon, hasLabel })),
                 'data-p-highlight': props.checked,
                 'data-p-disabled': props.disabled
             },
@@ -133,7 +133,7 @@ export const ToggleButton = React.memo(
 
         const boxProps = mergeProps(
             {
-                className: classNames(cx('box', { hasIcon, hasLabel }), props.className)
+                className: classNames(props.className, cx('box', { hasIcon, hasLabel }))
             },
             ptm('box')
         );

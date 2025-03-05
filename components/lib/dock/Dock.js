@@ -327,7 +327,7 @@ export const Dock = React.memo(
         const footer = createFooter();
         const rootProps = mergeProps(
             {
-                className: classNames(cx('root'), props.className),
+                className: classNames(props.className, cx('root')),
                 style: props.style
             },
             DockBase.getOtherProps(props),

@@ -4158,7 +4158,7 @@ export const Calendar = React.memo(
                         name={props.name}
                         type="text"
                         role="combobox"
-                        className={classNames(cx('input', { context }), props.inputClassName)}
+                        className={classNames(props.inputClassName, cx('input', { context }))}
                         style={props.inputStyle}
                         readOnly={props.readOnlyInput}
                         disabled={props.disabled}
@@ -4263,7 +4263,7 @@ export const Calendar = React.memo(
                             pt={ptm('todayButton')}
                             style={isHidden ? { visibility: 'hidden' } : undefined}
                         />
-                        <Button type="button" label={clear} onClick={onClearButtonClick} onKeyDown={(e) => onContainerButtonKeydown(e)} className={classNames(cx('clearButton'), props.clearButtonClassName)} pt={ptm('clearButton')} />
+                        <Button type="button" label={clear} onClick={onClearButtonClick} onKeyDown={(e) => onContainerButtonKeydown(e)} className={classNames(props.clearButtonClassName, cx('clearButton'))} pt={ptm('clearButton')} />
                     </div>
                 );
             }
@@ -4407,7 +4407,7 @@ export const Calendar = React.memo(
         const rootProps = mergeProps(
             {
                 id: props.id,
-                className: classNames(cx('root', { focusedState, isFilled, panelVisible: visible }), props.className),
+                className: classNames(props.className, cx('root', { focusedState, isFilled, panelVisible: visible })),
                 style: props.style
             },
             CalendarBase.getOtherProps(props),

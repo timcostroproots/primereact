@@ -32,7 +32,7 @@ export const ProgressBar = React.memo(
             const label = createLabel();
             const rootProps = mergeProps(
                 {
-                    className: classNames(cx('root'), props.className),
+                    className: classNames(props.className, cx('root')),
                     style: props.style,
                     role: 'progressbar',
                     'aria-valuemin': '0',
@@ -67,7 +67,7 @@ export const ProgressBar = React.memo(
         const createIndeterminate = () => {
             const rootProps = mergeProps(
                 {
-                    className: classNames(cx('root'), props.className),
+                    className: classNames(props.className, cx('root')),
                     style: props.style,
                     role: 'progressbar',
                     'aria-valuemin': '0',

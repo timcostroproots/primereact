@@ -677,7 +677,7 @@ export const Menubar = React.memo(
             {
                 id: props.id,
                 ref: elementRef,
-                className: classNames(cx('root', { mobileActiveState }), props.className),
+                className: classNames(props.className, cx('root', { mobileActiveState })),
                 style: props.style
             },
             MenubarBase.getOtherProps(props),

@@ -1180,7 +1180,7 @@ export const Dropdown = React.memo(
             {
                 id: props.id,
                 ref: elementRef,
-                className: classNames(cx('root', { context, focusedState, overlayVisibleState }), props.className),
+                className: classNames(props.className, cx('root', { context, focusedState, overlayVisibleState })),
                 style: props.style,
                 onClick: (e) => onClick(e),
                 onMouseDown: props.onMouseDown,

@@ -556,7 +556,7 @@ export const AutoComplete = React.memo(
                     aria-controls={ariaControls}
                     aria-haspopup="listbox"
                     aria-expanded={overlayVisibleState}
-                    className={classNames(cx('input', { context }), props.inputClassName)}
+                    className={classNames(props.inputClassName, cx('input', { context }))}
                     style={props.inputStyle}
                     autoComplete="off"
                     readOnly={props.readOnly}
@@ -765,7 +765,7 @@ export const AutoComplete = React.memo(
                 id: idState,
                 ref: elementRef,
                 style: props.style,
-                className: classNames(cx('root', { focusedState }), props.className)
+                className: classNames(props.className, cx('root', { focusedState }))
             },
             otherProps,
             ptm('root')

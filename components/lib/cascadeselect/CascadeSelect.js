@@ -471,7 +471,7 @@ export const CascadeSelect = React.memo(
                 {
                     id: props.id,
                     ref: elementRef,
-                    className: classNames(cx('root', { focusedState, overlayVisibleState, context }), props.className),
+                    className: classNames(props.className, cx('root', { focusedState, overlayVisibleState, context })),
                     style: props.style,
                     onClick: (e) => onClick(e)
                 },

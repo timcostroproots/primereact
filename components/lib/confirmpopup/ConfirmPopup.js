@@ -353,7 +353,7 @@ export const ConfirmPopup = React.memo(
             {
                 ref: overlayRef,
                 id: getPropValue('id'),
-                className: classNames(cx('root', { context, getPropValue }), props.className),
+                className: classNames(props.className, cx('root', { context, getPropValue })),
                 style: getPropValue('style'),
                 onClick: onPanelClick
             },

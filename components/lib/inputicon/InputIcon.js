@@ -21,7 +21,7 @@ export const InputIcon = React.memo(
 
         const rootProps = mergeProps(
             {
-                className: classNames(cx('root'), props.className)
+                className: classNames(props.className, cx('root'))
             },
             InputIconBase.getOtherProps(props),
             ptm('root')

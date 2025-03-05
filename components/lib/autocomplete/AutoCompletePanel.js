@@ -266,7 +266,7 @@ export const AutoCompletePanel = React.memo(
             const footer = createFooter();
             const panelProps = mergeProps(
                 {
-                    className: classNames(cx('panel', { context }), props.panelClassName),
+                    className: classNames(props.panelClassName, cx('panel', { context })),
                     style,
                     onClick: (e) => props.onClick(e)
                 },

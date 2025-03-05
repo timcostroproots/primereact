@@ -84,7 +84,7 @@ export const OrganizationChart = React.memo(
                 id: props.id,
                 ref: elementRef,
                 style: props.style,
-                className: classNames(cx('root'), props.className)
+                className: classNames(props.className, cx('root'))
             },
             OrganizationChartBase.getOtherProps(props),
             ptm('root')
