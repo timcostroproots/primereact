@@ -358,7 +358,7 @@ export const Slider = React.memo(
         const rootProps = mergeProps(
             {
                 style: props.style,
-                className: classNames(props.className, cx('root', { vertical, horizontal })),
+                className: classNames(cx('root', { vertical, horizontal }), props.className),
                 onClick: onBarClick
             },
             SliderBase.getOtherProps(props),

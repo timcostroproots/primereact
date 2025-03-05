@@ -219,7 +219,7 @@ export const Galleria = React.memo(
                 {
                     ref: elementRef,
                     id: id,
-                    className: classNames(props.className, cx('root', { context, thumbnailsPosClassName, indicatorPosClassName })),
+                    className: classNames(cx('root', { context, thumbnailsPosClassName, indicatorPosClassName }), props.className),
                     style: props.style,
                     role: 'region'
                 },

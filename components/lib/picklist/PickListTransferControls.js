@@ -128,7 +128,7 @@ export const PickListTransferControls = React.memo((props) => {
 
     const buttonsProps = mergeProps(
         {
-            className: classNames(props.className, cx('buttons'))
+            className: classNames(cx('buttons'), props.className)
         },
         ptm('buttons', { hostName: props.hostName })
     );

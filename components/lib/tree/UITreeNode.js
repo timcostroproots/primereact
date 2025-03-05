@@ -960,7 +960,7 @@ export const UITreeNode = React.memo((props) => {
         const nodeProps = mergeProps(
             {
                 ref: elementRef,
-                className: classNames(props.node.className, cx('node', { leaf: isLeaf })),
+                className: classNames(cx('node', { leaf: isLeaf }), props.node.className),
                 style: props.node.style,
                 tabIndex,
                 role: 'treeitem',

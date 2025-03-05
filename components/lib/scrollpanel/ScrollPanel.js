@@ -296,7 +296,7 @@ export const ScrollPanel = React.forwardRef((inProps, ref) => {
             id: props.id,
             ref: containerRef,
             style: props.style,
-            className: classNames(props.className, cx('root'))
+            className: classNames(cx('root'), props.className)
         },
         ScrollPanelBase.getOtherProps(props),
         ptm('root')

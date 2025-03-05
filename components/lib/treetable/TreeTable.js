@@ -1327,7 +1327,7 @@ export const TreeTable = React.forwardRef((inProps, ref) => {
             {
                 role: 'table',
                 style: props.tableStyle,
-                className: classNames(props.tableClassName, ptCallbacks.cx('table'))
+                className: classNames(ptCallbacks.cx('table'), props.tableClassName)
             },
             ptCallbacks.ptm('table')
         );

@@ -445,7 +445,7 @@ export const Password = React.memo(
             {
                 ref: elementRef,
                 id: props.id,
-                className: classNames(props.className, cx('root', { isFilled, focusedState })),
+                className: classNames(cx('root', { isFilled, focusedState }), props.className),
                 style: props.style
             },
             ptm('root')
@@ -456,7 +456,7 @@ export const Password = React.memo(
                 ref: inputRef,
                 id: props.inputId,
                 ...inputProps,
-                className: classNames(props.inputClassName, cx('input')),
+                className: classNames(cx('input'), props.inputClassName),
                 onBlur: onBlur,
                 onFocus: onFocus,
                 onInput: onInput,

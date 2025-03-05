@@ -242,7 +242,7 @@ export const DataScroller = React.memo(
             {
                 id: props.id,
                 ref: elementRef,
-                className: classNames(props.className, cx('root'))
+                className: classNames(cx('root'), props.className)
             },
             DataScrollerBase.getOtherProps(props),
             ptm('root')

@@ -197,7 +197,7 @@ export const Rating = React.memo(
             {
                 ref: elementRef,
                 id: props.id,
-                className: classNames(props.className, cx('root')),
+                className: classNames(cx('root'), props.className),
                 style: props.style
             },
             RatingBase.getOtherProps(props),

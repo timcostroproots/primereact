@@ -154,7 +154,7 @@ export const OrderListSubList = React.memo(
                                 onMouseMove: (e) => changeFocusedItemOnHover(e, i),
                                 onDragStart: (e) => onDragStart(e, i),
                                 onDragEnd: onDragEnd,
-                                className: classNames(props.className, cx('item', { selected, focused })),
+                                className: classNames(cx('item', { selected, focused }), props.className),
                                 'aria-selected': selected,
                                 'data-p-highlight': selected,
                                 'data-p-focused': focused
@@ -187,7 +187,7 @@ export const OrderListSubList = React.memo(
                             onClick: (e) => props.onItemClick({ originalEvent: e, value: item, index: i }),
                             onMouseDown: props.onOptionMouseDown,
                             onMouseMove: (e) => changeFocusedItemOnHover(e, i),
-                            className: classNames(props.className, cx('item', { selected, focused })),
+                            className: classNames(cx('item', { selected, focused }), props.className),
                             'aria-selected': selected,
                             'data-p-highlight': selected,
                             'data-p-focused': focused

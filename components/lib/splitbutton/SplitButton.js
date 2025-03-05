@@ -134,7 +134,7 @@ export const SplitButton = React.memo(
             {
                 ref: elementRef,
                 id: idState,
-                className: classNames(props.className, cx('root', { size })),
+                className: classNames(cx('root', { size }), props.className),
                 style: props.style
             },
             SplitButtonBase.getOtherProps(props),
@@ -147,7 +147,7 @@ export const SplitButton = React.memo(
                     <Button
                         ref={defaultButtonRef}
                         type="button"
-                        className={classNames(props.buttonClassName, cx('button'))}
+                        className={classNames(cx('button'), props.buttonClassName)}
                         icon={props.icon}
                         loading={props.loading}
                         loadingIcon={props.loadingIcon}
@@ -172,7 +172,7 @@ export const SplitButton = React.memo(
                     </Button>
                     <Button
                         type="button"
-                        className={classNames(props.menuButtonClassName, cx('menuButton'))}
+                        className={classNames(cx('menuButton'), props.menuButtonClassName)}
                         icon={dropdownIcon}
                         onClick={onDropdownButtonClick}
                         disabled={props.disabled}
@@ -202,7 +202,7 @@ export const SplitButton = React.memo(
                         style={props.menuStyle}
                         autoZIndex={props.autoZIndex}
                         baseZIndex={props.baseZIndex}
-                        className={classNames(props.menuClassName, cx('menu'))}
+                        className={classNames(cx('menu'), props.menuClassName)}
                         onClick={onPanelClick}
                         onShow={onMenuShow}
                         onHide={onMenuHide}

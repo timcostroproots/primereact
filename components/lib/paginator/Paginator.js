@@ -307,7 +307,7 @@ export const Paginator = React.memo(
         const rootProps = mergeProps(
             {
                 ref: elementRef,
-                className: classNames(props.className, cx('root')),
+                className: classNames(cx('root'), props.className),
                 style: props.style
             },
             PaginatorBase.getOtherProps(props),

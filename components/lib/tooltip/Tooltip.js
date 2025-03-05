@@ -516,7 +516,7 @@ export const Tooltip = React.memo(
             const rootProps = mergeProps(
                 {
                     id: props.id,
-                    className: classNames(props.className, cx('root', { positionState, classNameState })),
+                    className: classNames(cx('root', { positionState, classNameState }), props.className),
                     style: props.style,
                     role: 'tooltip',
                     'aria-hidden': visibleState,

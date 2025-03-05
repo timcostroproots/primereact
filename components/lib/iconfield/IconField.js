@@ -21,7 +21,7 @@ export const IconField = React.memo(
 
         const rootProps = mergeProps(
             {
-                className: classNames(props.className, cx('root', { iconPosition: props.iconPosition }))
+                className: classNames(cx('root', { iconPosition: props.iconPosition }), props.className)
             },
             IconFieldBase.getOtherProps(props),
             ptm('root')

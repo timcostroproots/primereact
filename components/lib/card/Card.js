@@ -96,7 +96,7 @@ export const Card = React.forwardRef((inProps, ref) => {
             id: props.id,
             ref: elementRef,
             style: props.style,
-            className: classNames(props.className, cx('root'))
+            className: classNames(cx('root'), props.className)
         },
         CardBase.getOtherProps(props),
         ptm('root')

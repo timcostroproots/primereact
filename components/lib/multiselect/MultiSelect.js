@@ -1103,7 +1103,7 @@ export const MultiSelect = React.memo(
                 ref: elementRef,
                 id: props.id,
                 style: { ...props.style, ...sx('root') },
-                className: classNames(props.className, cx('root', { focusedState, context, overlayVisibleState })),
+                className: classNames(cx('root', { focusedState, context, overlayVisibleState }), props.className),
                 ...otherProps,
                 onClick: onClick
             },

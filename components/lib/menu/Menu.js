@@ -446,7 +446,7 @@ export const Menu = React.memo(
                 const menuitems = createMenu();
                 const rootProps = mergeProps(
                     {
-                        className: classNames(props.className, cx('root', { context })),
+                        className: classNames(cx('root', { context }), props.className),
                         style: props.style,
                         onClick: (e) => onPanelClick(e)
                     },

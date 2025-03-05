@@ -153,7 +153,7 @@ export const Inplace = React.forwardRef((inProps, ref) => {
     const rootProps = mergeProps(
         {
             ref: elementRef,
-            className: classNames(props.className, cx('root')),
+            className: classNames(cx('root'), props.className),
             'aria-live': 'polite'
         },
         InplaceBase.getOtherProps(props),

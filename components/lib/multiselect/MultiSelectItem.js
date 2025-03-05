@@ -63,7 +63,7 @@ export const MultiSelectItem = React.memo((props) => {
 
     const itemProps = mergeProps(
         {
-            className: classNames(props.className, props.option.className, cx('item', { itemProps: props })),
+            className: classNames(cx('item', { itemProps: props }), props.className, props.option.className),
             style: props.style,
             onClick: onClick,
             onFocus: onFocus,

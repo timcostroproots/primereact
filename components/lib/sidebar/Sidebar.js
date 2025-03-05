@@ -214,7 +214,7 @@ export const Sidebar = React.forwardRef((inProps, ref) => {
     const rootProps = mergeProps(
         {
             id: props.id,
-            className: classNames(props.className, cx('root', { context })),
+            className: classNames(cx('root', { context }), props.className),
             style: props.style,
             role: 'complementary'
         },

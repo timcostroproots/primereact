@@ -27,7 +27,7 @@ export const AvatarGroup = React.forwardRef((inProps, ref) => {
         {
             ref: elementRef,
             style: props.style,
-            className: classNames(props.className, cx('root'))
+            className: classNames(cx('root'), props.className)
         },
         AvatarGroupBase.getOtherProps(props),
         ptm('root')

@@ -108,7 +108,7 @@ export const SelectButtonItem = React.memo((props) => {
 
     const buttonProps = mergeProps(
         {
-            className: classNames(props.className, cx('button', { itemProps: props, focusedState })),
+            className: classNames(cx('button', { itemProps: props, focusedState }), props.className),
             role: 'button',
             'aria-label': props.label,
             'aria-pressed': props.selected,

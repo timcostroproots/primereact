@@ -684,7 +684,7 @@ export const TieredMenu = React.memo(
                 {
                     ref: containerRef,
                     id: props.id,
-                    className: classNames(props.className, cx('root')),
+                    className: classNames(cx('root'), props.className),
                     style: props.style,
                     onClick: onPanelClick
                 },

@@ -615,7 +615,7 @@ export const PickList = React.memo(
             {
                 id: attributeSelectorState,
                 ref: elementRef,
-                className: classNames(props.className, cx('root')),
+                className: classNames(cx('root'), props.className),
                 style: props.style
             },
             PickListBase.getOtherProps(props),

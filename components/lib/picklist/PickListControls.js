@@ -141,7 +141,7 @@ export const PickListControls = React.memo((props) => {
 
     const controlsProps = mergeProps(
         {
-            className: classNames(props.className, cx('controls'))
+            className: classNames(cx('controls'), props.className)
         },
         ptm('controls', { hostName: props.hostName })
     );

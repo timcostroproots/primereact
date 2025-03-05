@@ -166,7 +166,7 @@ export const PickListSubList = React.memo(
             const listProps = mergeProps(
                 {
                     ref: listElementRef,
-                    className: classNames(props.listClassName, cx('list')),
+                    className: classNames(cx('list'), props.listClassName),
                     role: 'listbox',
                     id: props.parentId + '_' + props.type + '_list',
                     'aria-multiselectable': true,

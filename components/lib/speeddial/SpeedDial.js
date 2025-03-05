@@ -524,7 +524,7 @@ export const SpeedDial = React.memo(
             const buttonProps = mergeProps({
                 type: 'button',
                 style: props.buttonStyle,
-                className: classNames(props.buttonClassName, cx('button')),
+                className: classNames(cx('button'), props.buttonClassName),
                 icon: toggleIcon,
                 onClick: (e) => onClick(e),
                 disabled: props.disabled,
@@ -593,7 +593,7 @@ export const SpeedDial = React.memo(
         const mask = createMask();
         const rootProps = mergeProps(
             {
-                className: classNames(props.className, cx('root', { visible })),
+                className: classNames(cx('root', { visible }), props.className),
                 style: { ...props.style, ...sx('root') },
                 id: idState
             },

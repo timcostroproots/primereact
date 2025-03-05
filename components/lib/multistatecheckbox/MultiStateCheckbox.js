@@ -160,7 +160,7 @@ export const MultiStateCheckbox = React.memo(
             {
                 ref: elementRef,
                 id: props.id,
-                className: classNames(props.className, cx('root')),
+                className: classNames(cx('root'), props.className),
                 style: props.style,
                 onClick: onClick
             },

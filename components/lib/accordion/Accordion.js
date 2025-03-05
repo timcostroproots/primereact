@@ -331,7 +331,7 @@ export const Accordion = React.forwardRef((inProps, ref) => {
     const tabs = createTabs();
     const rootProps = mergeProps(
         {
-            className: classNames(props.className, cx('root')),
+            className: classNames(cx('root'), props.className),
             style: props.style
         },
         AccordionBase.getOtherProps(props),

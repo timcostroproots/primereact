@@ -471,7 +471,7 @@ export const Splitter = React.memo(
             {
                 id: props.id,
                 style: props.style,
-                className: classNames(props.className, cx('root')),
+                className: classNames(cx('root'), props.className),
                 'data-p-splitter-resizing': false
             },
             SplitterBase.getOtherProps(props),

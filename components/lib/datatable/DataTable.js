@@ -1881,7 +1881,7 @@ export const DataTable = React.forwardRef((inProps, ref) => {
                         const tableFooter = createTableFooter(options);
                         const tableProps = mergeProps(
                             {
-                                className: classNames(props.tableClassName, ptCallbacks.cx('table')),
+                                className: classNames(ptCallbacks.cx('table'), props.tableClassName),
                                 style: props.tableStyle,
                                 role: 'table'
                             },
@@ -2027,7 +2027,7 @@ export const DataTable = React.forwardRef((inProps, ref) => {
     const rootProps = mergeProps(
         {
             id: props.id,
-            className: classNames(props.className, ptCallbacks.cx('root', { selectable })),
+            className: classNames(ptCallbacks.cx('root', { selectable }), props.className),
             style: props.style,
             'data-scrollselectors': '.p-datatable-wrapper',
             'data-showgridlines': props.showGridlines

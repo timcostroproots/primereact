@@ -34,7 +34,7 @@ export const DataViewLayoutOptions = React.memo((inProps) => {
         {
             id: props.id,
             style: props.style,
-            className: classNames(props.className, cx('root'))
+            className: classNames(cx('root'), props.className)
         },
         DataViewLayoutOptionsBase.getOtherProps(props),
         ptm('root')
@@ -333,7 +333,7 @@ export const DataView = React.memo(
                 id: props.id,
                 ref: elementRef,
                 style: props.style,
-                className: classNames(props.className, cx('root'))
+                className: classNames(cx('root'), props.className)
             },
             DataViewBase.getOtherProps(props),
             ptm('root')

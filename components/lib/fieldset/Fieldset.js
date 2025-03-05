@@ -199,7 +199,7 @@ export const Fieldset = React.forwardRef((inProps, ref) => {
             id: idState,
             ref: elementRef,
             style: props.style,
-            className: classNames(props.className, cx('root')),
+            className: classNames(cx('root'), props.className),
             onClick: props.onClick
         },
         FieldsetBase.getOtherProps(props),

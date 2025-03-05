@@ -108,7 +108,7 @@ export const Checkbox = React.memo(
         const rootProps = mergeProps(
             {
                 id: props.id,
-                className: classNames(props.className, cx('root', { checked, context })),
+                className: classNames(cx('root', { checked, context }), props.className),
                 style: props.style,
                 'data-p-highlight': checked,
                 'data-p-disabled': props.disabled,

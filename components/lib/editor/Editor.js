@@ -258,7 +258,7 @@ export const Editor = React.memo(
         const content = <div {...contentProps} />;
         const rootProps = mergeProps(
             {
-                className: classNames(props.className, cx('root'))
+                className: classNames(cx('root'), props.className)
             },
             EditorBase.getOtherProps(props),
             ptm('root')

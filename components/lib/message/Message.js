@@ -84,7 +84,7 @@ export const Message = React.memo(
 
         const rootProps = mergeProps(
             {
-                className: classNames(props.className, cx('root')),
+                className: classNames(cx('root'), props.className),
                 style: props.style,
                 role: 'alert',
                 'aria-live': 'polite',

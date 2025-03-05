@@ -80,7 +80,7 @@ export const InputText = React.memo(
 
         const rootProps = mergeProps(
             {
-                className: classNames(props.className, cx('root', { context, isFilled })),
+                className: classNames(cx('root', { context, isFilled }), props.className),
                 onBeforeInput: onBeforeInput,
                 onInput: onInput,
                 onKeyDown: onKeyDown,

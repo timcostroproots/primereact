@@ -28,7 +28,7 @@ export const Skeleton = React.memo(
         const rootProps = mergeProps(
             {
                 ref: elementRef,
-                className: classNames(props.className, cx('root')),
+                className: classNames(cx('root'), props.className),
                 style: { ...style, ...sx('root') },
                 'aria-hidden': true
             },

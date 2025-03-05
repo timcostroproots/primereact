@@ -332,7 +332,7 @@ export const TabMenu = React.memo(
                 {
                     id: props.id,
                     ref: elementRef,
-                    className: classNames(props.className, cx('root')),
+                    className: classNames(cx('root'), props.className),
                     style: props.style
                 },
                 TabMenuBase.getOtherProps(props),
