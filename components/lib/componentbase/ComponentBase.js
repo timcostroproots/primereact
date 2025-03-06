@@ -497,18 +497,21 @@ export const ComponentBase = {
 
         const setMetaData = (metadata = {}) => {
             const { props, state } = metadata;
-            const ptm = (key = '', params = {}) => getPTValue((props || {}).pt, key, { ...metadata, ...params });
-            const ptmo = (obj = {}, key = '', params = {}) => getPTValue(obj, key, params, false);
+            const passThroughMethod = (key = '', params = {}) => getPTValue((props || {}).pt, key, { ...metadata, ...params });
+            const passThroughMethodOptions = (obj = {}, key = '', params = {}) => getPTValue(obj, key, params, false);
 
             const isUnstyled = () => {
                 return ComponentBase.context.unstyled || PrimeReact.unstyled || props.unstyled;
             };
 
-            const cx = (key = '', params = {}) => {
-                return !isUnstyled() ? getOptionValue(css && css.classes, key, { props, state, ...params }) : undefined;
+            const classNameContext = (key = '', params = {}) => {
+                if(isUnstyled()) {
+                    return undefined;
+                }
+                return getOptionValue(css && css.classes, key, { props, state, ...params });
             };
 
-            const sx = (key = '', params = {}, when = true) => {
+            const styleContext = (key = '', params = {}, when = true) => {
                 if (when) {
                     const self = getOptionValue(css && css.inlineStyles, key, { props, state, ...params });
                     const base = getOptionValue(inlineStyles, key, { props, state, ...params });
@@ -519,7 +522,13 @@ export const ComponentBase = {
                 return undefined;
             };
 
-            return { ptm, ptmo, sx, cx, isUnstyled };
+            return {
+                ptm: passThroughMethod,
+                ptmo: passThroughMethodOptions,
+                sx: styleContext,
+                cx: classNameContext,
+                isUnstyled
+            };
         };
 
         return {
